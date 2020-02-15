@@ -6,27 +6,16 @@ function computerGo(){
 
 function playerGo(){
     let playerChoose = prompt("Enter Rock, Paper, or Scissors to play.");
-    while (playerChoose === null){
+    while (playerChoose === null || 
+           playerChoose.toLowerCase() != "rock" && 
+           playerChoose.toLowerCase() != "paper" && 
+           playerChoose.toLowerCase() != "scissors"){
         alert("Please make a valid entry. Rock, paper, or scissors.");
         playerChoose = prompt("Enter Rock, paper, or scissors.");
     }
-    playerChoose = playerChoose.toLowerCase();
     if (playerChoose == "rock" || playerChoose == "paper" || playerChoose == "scissors"){
-        alert("good choice")
-        playerPlay = playerChoose;
+        alert("Good choice!")
+    }
+    playerPlay = playerChoose.toLowerCase();
         return playerPlay;
-    }
-    else{
-        do{
-            playerChoose = prompt("Enter a valid selection. Rock, paper, or scissors");
-            while (playerChoose === null){
-                alert("Please make a valid selection.");
-                playerChoose = prompt("Enter rock, paper, or scissors");
-            }
-            playerChoose.toLowerCase();
-        }
-        while (playerChoose != "rock" && playerChoose != "paper" && playerChoose != "scissors")
-    }
-    playerPlay = playerChoose;
-    return playerPlay;
 }
