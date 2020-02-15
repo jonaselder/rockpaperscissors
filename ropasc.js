@@ -19,3 +19,24 @@ function playerGo(){
     playerPlay = playerChoose.toLowerCase();
         return playerPlay;
 }
+
+function roundPlay(playerSelection, computerSelection){
+    playerSelection = playerGo();
+    computerSelection = computerGo();
+    if (playerSelection == computerSelection){
+        alert("Tie game.")
+        return 0
+    }
+    else if (playerSelection == "rock" && computerSelection == "scissors" || 
+             playerSelection == "paper" && computerSelection == "rock" ||
+             playerSelection == "scissors" && computerSelection == "paper"){
+                 alert("You win!")
+        return 1
+             }
+    else {
+        alert("You lost.")
+        return 2
+    }
+}
+
+
