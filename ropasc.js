@@ -13,7 +13,9 @@ function playerGo(){
         alert("Please make a valid entry. Rock, paper, or scissors.");
         playerChoose = prompt("Enter Rock, paper, or scissors.");
     }
-    if (playerChoose == "rock" || playerChoose == "paper" || playerChoose == "scissors"){
+    if (playerChoose.toLowerCase() == "rock" || 
+        playerChoose.toLowerCase() == "paper" || 
+        playerChoose == "scissors"){
         alert("Good choice!")
     }
     playerPlay = playerChoose.toLowerCase();
