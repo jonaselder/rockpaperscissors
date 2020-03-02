@@ -1,12 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/home/jonas/Documents/theodinproject/js/rockpaperscissors/css/style.css">
     <title>
         Rock, Paper, Scissors
     </title>
 </head>
 <body>
+    <div id="container">
+      <div id="playSpace">
+        <div id="scoreboard" class="row">
+            <div id="currentRound" class="content">
+                <div id="gameState" class="content"><h1>Game #</h1></div>
+                    <div id="gameNumber" class="content"></div>          
+                <div id="playerWin" class="content border roundtrack">W: 0</div>
+                <div id="tie" class="content border roundtrack">T: 0</div>
+                <div id="compWin" class="content border roundtrack">W: 0</div>
+            </div>
+            <!--<div class="rndwinbg player">-->
+            <div id="playRndWin" class="content border scorewindow"></div>
+            <!--</div>-->
+            <!--<div class="rndwinbg computer">-->
+            <div id="compRndWin" class="content border scorewindow"></div>
+            <!--</div>-->
+        </div>
+        <div id="playArea" class="row">
+            <div id="playerPlay" class="content border playwindow"></div>
+            <div id="computerPlay" class="content border playwindow"></div>
+            <div id="playerSelect" class ="content border buttonbar">
+                <div id="rock" class="playerbuttons"></div>
+                <div id="paper" class="playerbuttons"></div>
+                <div id="scissors" class="playerbuttons test"></div>
+            </div>
+            <div id="computerButton" class="content border buttonbar">
+                <div id="cRock" class="compbuttons"></div>
+                <div id="cPaper" class="compbuttons"></div>
+                <div id="cScissors" class="compbuttons"></div>
+            </div>
+        </div>
+        <div id="start" class="row">
+            <div id="startQuit" class="content border"><span class="startbutton">Start Game!</span></div>
+        </div>
+      </div>
+    </div>
 
-    <script src="ropasc.js"></script>
+    <script src="/home/jonas/Documents/theodinproject/js/scratch.js"></script>
 </body>
 </html>

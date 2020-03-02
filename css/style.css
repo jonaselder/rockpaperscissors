@@ -1,0 +1,303 @@
+@font-face{
+    font-family: daysone;
+    src: url("/home/jonas/Documents/theodinproject/js/rockpaperscissors/fonts/daysone/DaysOne-Regular.ttf")
+}
+
+html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: daysone;
+    color: white;
+}
+
+span{
+    display: inline-block;
+    vertical-align: middle;
+    padding-top: 13px;
+}
+
+#container{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    background-color: #000000;
+}
+
+#playSpace{
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 800px;
+    width: 1000px;
+    position: absolute;
+    border: 5px solid #ffff81;
+    border-radius: 2em;
+    top: 5em;
+    left: calc(50% - 1010px / 2);
+    background-image: linear-gradient(#006699, #0099cc);
+    box-shadow: 0px 0px 15px #ffff81;
+
+}
+
+div.row{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    position: relative;
+}
+
+.content{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+}
+
+#scoreboard{
+    height: 35%;
+    border-top-left-radius: 1.8em;
+    border-top-right-radius: 1.8em;
+}
+
+#playArea{
+    height: 50%;
+}
+
+#start{
+    height: 15%;
+}
+
+.border{
+    border: 3px solid #ffff81;
+    border-radius: 1em;
+    box-shadow:0px 0px 5px #ffff81;
+}
+
+#currentRound{
+    height: 100px;
+    width: 300px;
+    left: calc(50% - 300px/2);
+}
+
+h1{
+    margin-top: 0;
+    font-size: 3em;
+    margin-left: calc(150px - 206px / 2);
+    cursor: default;
+}
+
+
+div.roundtrack{
+    padding: 1px 4px;
+    border: 1.5px solid #ffff81;
+    background-image: linear-gradient(rgba(255,255,129,.5),rgba(0,0,0,.25),rgba(255,255,129,.5));
+    cursor: default;
+    box-shadow: 0px 0px 5px #ffff81;
+}
+
+#playerWin{
+    bottom: 0px;
+    left: 0px;
+}
+
+#tie{
+    bottom: 0px;
+    left: 127px;
+}
+
+#compWin{
+    bottom: 0px;
+    right: 0px;
+}
+
+.scorewindow{
+    background-size: 75px;
+    height: 85px;
+    width: 85px;
+}
+
+/*.rndwinbg{
+    position: absolute;
+    height: 85px;
+    width: 85px;
+    border: 3px solid black;
+    border-radius: 1em;
+}
+
+.rndwinbg.player{
+    top: 60px;
+    left: 20px;
+    background-image: linear-gradient(rgba(255,255,129,.5),rgba(0,0,0,.25),rgba(255,255,129,.5));
+}
+
+.rndwinbg.computer{
+    top: 60px;
+    right: 20px;
+    background-image: linear-gradient(rgba(255,255,129,.5),rgba(0,0,0,.25),rgba(255,255,129,.5));
+}*/
+
+
+#playRndWin{
+    background-image: url("/home/jonas/Documents/theodinproject/js/rockpaperscissors/images/0.webp");
+    background-repeat: no-repeat;
+    background-position: 3px 4px;
+    top: 60px;
+    left: 20px;
+}
+
+#compRndWin{
+    background-image: url("/home/jonas/Documents/theodinproject/js/rockpaperscissors/images/0.webp");
+    background-repeat: no-repeat;
+    background-position: 3px 4px;
+    top: 60px;
+    right: 20px;
+}
+
+.playwindow{
+    top: 10px;
+    height:275px;
+    width: 275px;
+}
+
+#playerPlay{
+    background-image: url("/home/jonas/Documents/theodinproject/js/rockpaperscissors/images/hands.png");
+    background-size: 784.7px 644.2px;
+    background-position-x: -510.1px;
+    background-position-y: -373.7px;
+    background-repeat: no-repeat;
+    left: 50px;
+    background-color: rgba(255,255,129,.9);
+}
+
+#computerPlay{
+    background-image: url("/home/jonas/Documents/theodinproject/js/rockpaperscissors/images/hands.png");
+    background-size: 784.7px 644.2px;
+    background-position: -500px -63px;
+    background-repeat: no-repeat;
+    right: 50px;
+    background-color: rgba(255,255,129,.9);
+}
+
+div.buttonbar{
+    border-radius: .5em;
+}
+
+.buttonbar{
+    width: 240px;
+    height: auto;
+    margin: 0 auto;
+    padding: 3px 3px 0px 3px;
+    top: 295px;
+    background-image: linear-gradient(rgba(255,255,129,.75),rgba(0,0,0,.25),rgba(255,255,129,.75));
+}
+
+#playerSelect{
+    left: calc(191px - 216px / 2);
+}
+
+#computerButton{
+    right: calc(191px - 216px / 2);
+}
+
+.playerbuttons{
+    height: 66px;
+    width: 72px;
+    /*border: 1px solid black;*/
+    border-radius: .25em;
+    background-image: url("/home/jonas/Documents/theodinproject/js/rockpaperscissors/images/hands.png");
+    background-size: 163px 134px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    transition: border 25s;
+}
+
+.compbuttons{
+    height: 66px;
+    width: 72px;
+    border: 1px solid black;
+    border-radius: .25em;
+    background-image: url("/home/jonas/Documents/theodinproject/js/rockpaperscissors/images/handsmirror.png");
+    background-size: 163px 134px;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+
+#rock{
+    background-position-x: -103.1px;
+    background-position-y: -70.1px;
+    border: 1px solid black;
+    transition: all .4s;
+}
+
+div.highlight{
+    transform: scale(1.08);
+    border: 1px solid red;
+    box-shadow:0px 0px 2px red;
+}
+
+div.highlightplus{
+    box-shadow:0px 0px 7px red;
+}
+
+#paper{
+    background-position-x: -22.7px;
+    background-position-y: -69.7px;
+    border: 1px solid black;
+    transition: all .4s;
+}
+
+#scissors{
+    background-position-x: .5px;
+    background-position-y: 7px;
+    border: 1px solid black;
+    transition: all .4s;
+}
+
+#cRock{
+    background-position: 7px -66px;
+}
+
+#cPaper{
+    background-position: -66px -69px;
+}
+
+#cScissors{
+    background-position: -92px 7px;
+}
+
+#start{
+    border-bottom-right-radius: 1.8em;
+    border-bottom-left-radius: 1.8em;
+}
+
+#startQuit{
+    width: 150px;
+    height: 50px;
+    left: calc(50% - 150px / 2);
+    background-image: linear-gradient(rgba(255,255,129,.5),rgba(0,0,0,.25),rgba(255,255,129,.5));
+    border-color:#ffff81;
+    box-shadow:0px 0px 5px #ffff81;
+    cursor: default;
+}
+
+.startquithover{
+    transform:scale(1.1);
+    border-color:#ffff81;
+    box-shadow: 0px 0px 15px #ffff81;
+    cursor: default;
+}
+
+
+
